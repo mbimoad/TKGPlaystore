@@ -1,0 +1,240 @@
+* {
+  margin: unset;
+  padding: unset;
+  font: unset;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+p, a, ul li, ol li, button, span, input, textarea {
+  font-size: 18px;
+  color: white;
+  text-decoration: unset;
+}
+
+input, textarea {
+  padding: 5px;
+  padding-left: 15px;
+  border: unset;
+  outline: unset;
+}
+
+body {
+  background: black;
+  font-family: 'calibri';
+}
+
+header {
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 30px;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+header .logo img {
+  width: 200px;
+}
+
+header .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  width: 50%;
+  background: #e4e4e4;
+  padding: 0 20px;
+  border: 1px solid red;
+}
+
+header .search img {
+  width: 20px;
+}
+
+header .search input {
+  color: gray;
+  background: transparent;
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+}
+
+header .profiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+header .profiles .notification {
+  position: relative;
+}
+
+header .profiles .notification img {
+  width: 40px;
+}
+
+header .profiles .notification .notif {
+  width: 15px;
+  height: 15px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+header .profiles .profile {
+  gap: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .profiles .profile img {
+  width: 40px;
+}
+
+header .profiles .profile-info {
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+aside {
+  position: absolute;
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  border: 1px solid red;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+}
+
+aside div {
+  text-align: center;
+}
+
+aside div img {
+  width: 30px;
+  height: auto;
+}
+
+aside div ul {
+  margin-top: 50px;
+  gap: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+aside .opt {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.container {
+  padding: 140px 100px;
+}
+
+.container .cover-header {
+  border: 1px solid blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+  background: #181818;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.container .cover-header .detail {
+  padding-left: 50px;
+}
+
+.container .cover-header .detail h1 {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.container .cover-header .detail p {
+  font-size: 25px;
+  line-height: 2;
+}
+/*# sourceMappingURL=style.css.map */
