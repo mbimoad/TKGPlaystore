@@ -84,11 +84,13 @@ header {
         align-items: center;
         gap: 40px; 
         .darkmode {
+            cursor:pointer;
             img {
                 width: 40px; 
             }
         }
         .notification {
+            cursor:pointer;
             position:relative;
             img {
                 width: 40px; 
@@ -152,11 +154,13 @@ aside.user-online {
                 width: 25px; 
                 height: 25px; 
             } p {
-                font-size: 22px; 
+                font-size: 20px;
+                background: black;
+                padding: 1px 6px;
             }
         } img {
-            width: 20px; 
-            height: 20px; 
+            width: 15px; 
+            height: 15px; 
         }
     }
 
@@ -177,8 +181,8 @@ aside.user-online {
                 width: 25px; 
                 height: 25px; 
                 position:absolute; 
-                right: 1px; 
-                bottom: 1px; 
+                right: -3px; 
+                bottom: -3px; 
                 background:lightgreen;
                 border-radius: 50%; 
                 border: 4px solid black; 
@@ -196,7 +200,7 @@ aside {
     // border:1px solid red;
     justify-content:center; 
     align-items:center;
-    gap: 40px;
+    gap: 35px;
     z-index: 9;
     div {
         
@@ -229,6 +233,7 @@ aside {
     padding-bottom: 70px;
     padding-left: 160px;
     padding-right: 80px;
+    // dashboard
     .cover-header {
         // border:1px solid blue;
         display:flex; 
@@ -397,10 +402,106 @@ aside {
             }
         }
     }
+
+
+    // detail 
+    .cover-header-detail {
+        display:flex; 
+        align-items:center;
+        gap: 20px;
+        .card {
+            background-image:cover; 
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 30px;
+            position:relative; 
+            padding: 10px 20px; 
+            height: 400px;
+            overflow:hidden;
+            display:flex; 
+            // justify-content:flex-end; 
+            align-items:flex-end;
+            .available {
+                position:absolute; 
+                left: 0;
+                top: 0; 
+                background: rgba(0, 0,0,.5); 
+                padding: 3px 30px; 
+                border-radius: 0 30px 30px 0; 
+            }
+
+            .detail {
+                display:flex; 
+                flex-direction:column;
+                gap: 20px; 
+                p {
+                    font-size: 24px;
+                }
+                &-footer {
+                    
+                    display:flex; 
+                    align-items:center; 
+                    justify-content: flex-start;
+                    gap: 20px;
+                    a {
+                        margin-left: auto;
+                        background:black;
+                        display:inline-block;
+                        padding: 7px 10px; 
+                        border-radius: 5px; 
+                    }
+                    img {
+                        width: 50px; 
+                        height: 50px; 
+                        object-fit:cover; 
+                        border-radius: 15px; 
+                        
+                    } .info {
+                        h4 {
+                            font-size: 18px; 
+                        }
+                        .information {
+                            display:flex; 
+                            align-items:center; 
+                            justify-content: flex-start;
+                            // border:1px solid red;
+                            flex:1;
+                            border-radius: 100px;
+                            padding: 2px 0;
+                                img {
+                                    width: 15px; 
+                                    height: 15px; 
+                                    object-fit:cover; 
+                                } h3 {
+                                    font-size: 16px; 
+                                }
+                        }
+                    }
+                }
+                position:relative; 
+                z-index: 9;
+
+
+            } .shadow {
+                background:#0000008a;
+                width: 100%; 
+                height: 48%;
+                position:absolute; 
+                bottom: 0; 
+                left: 0; 
+                right: 0; 
+
+            }
+        }
+    }
 }
 
 footer {
-    position: relative;
+    // bottom: 0;
+    // left: 0; 
+    // right: 0;
+    // // margin-bottom: auto;
+    // position: absolute;
     z-index:1;
     padding:20px 100px;
     padding-right: 160px;

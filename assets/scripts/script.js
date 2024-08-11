@@ -28,6 +28,27 @@ const cardElements = () => {
     </div>`;
 }
 
+const cardDetail = () => {
+    return `<div class="card" style="background-image: url('./assets/image/kukdong.webp');">
+            <span class="available">Now Available</span>
+            <div class="detail">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsam asperiores rerum.</p>
+                <div class="detail-footer">
+                    <img src="./assets/image/icon.png">
+                    <div class="info">
+                        <h4>Kukdong Monitoring</h4>
+                        <div class="information">
+                            <img src="./assets/icon/code.svg" class="information-icon">
+                            <h3>Codeigniter</h3>
+                        </div>
+                    </div>
+                    <a href="#">Detail Apps</a>
+                </div>
+            </div>
+            <div class="shadow"></div>
+        </div>`;
+}
+
 const itemsElements = () => {
     return `  <div class="item">
     <img src="./assets/image/kukdong.webp" alt="">
@@ -52,11 +73,22 @@ const desktop = document.querySelectorAll('.devices .cards');
 const items   = document.querySelectorAll('.right .items'); 
 let elements  = ""; 
 
-// Inner Cards
-for(i=1; i<=3; i++) elements += cardElements();
-desktop.forEach(item => item.innerHTML = elements)
+if(desktop.length != 0) {
+    for(i=1; i<=3; i++) elements += cardElements();
+    desktop.forEach(item => item.innerHTML = elements)
+} 
 
-elements = ""; 
-for(i=1; i<=4; i++) elements += itemsElements();
-items.forEach(item => item.innerHTML = elements)
+if(items.length != 0) {
+    elements = ""; 
+    for(i=1; i<=4; i++) elements += itemsElements();
+    items.forEach((item, index) => item.innerHTML = elements)
+}
 
+
+
+const coverdetail = document.querySelector('.cover-header-detail'); 
+if(coverdetail) {
+    elements = ""; 
+    for(i=1; i<=3; i++) elements += cardDetail();
+    coverdetail.innerHTML = elements; 
+}
