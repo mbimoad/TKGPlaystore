@@ -34,12 +34,11 @@ body {
 
 header {
   background: black;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
-  border: 1px solid red;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,10 +73,9 @@ header .search {
       -ms-flex-align: center;
           align-items: center;
   height: 70px;
-  width: 50%;
+  width: 45%;
   background: #e4e4e4;
   padding: 0 20px;
-  border: 1px solid red;
 }
 
 header .search img {
@@ -87,7 +85,6 @@ header .search img {
 header .search input {
   color: gray;
   background: transparent;
-  border: 1px solid red;
   width: 100%;
   height: 100%;
 }
@@ -135,7 +132,6 @@ header .profiles .profile img {
 }
 
 header .profiles .profile-info {
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,7 +145,8 @@ header .profiles .profile-info {
 }
 
 aside {
-  position: absolute;
+  background: #464646;
+  position: fixed;
   width: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -161,7 +158,6 @@ aside {
   bottom: 0;
   left: 0;
   top: 0;
-  border: 1px solid red;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -169,6 +165,7 @@ aside {
       -ms-flex-align: center;
           align-items: center;
   gap: 50px;
+  z-index: 9;
 }
 
 aside div {
@@ -208,10 +205,10 @@ aside .opt {
 
 .container {
   padding: 140px 100px;
+  padding-bottom: 70px;
 }
 
 .container .cover-header {
-  border: 1px solid blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,6 +219,7 @@ aside .opt {
   background: #181818;
   border-radius: 30px;
   overflow: hidden;
+  margin-bottom: 80px;
 }
 
 .container .cover-header .detail {
@@ -236,5 +234,237 @@ aside .opt {
 .container .cover-header .detail p {
   font-size: 25px;
   line-height: 2;
+}
+
+.container .twolayer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.container .twolayer .left {
+  width: 80%;
+}
+
+.container .twolayer .left .devices:nth-child(n+2) {
+  margin-top: 80px;
+}
+
+.container .twolayer .left .devices .title h3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.container .twolayer .left .devices .title p {
+  font-size: 18px;
+}
+
+.container .twolayer .left .devices .cards {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 25px;
+}
+
+.container .twolayer .left .devices .cards .card-cover {
+  width: 100%;
+}
+
+.container .twolayer .left .devices .cards .card .detail {
+  padding: 10px;
+}
+
+.container .twolayer .left .devices .cards .card .detail .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.container .twolayer .left .devices .cards .card .detail .title .icon {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .twolayer .left .devices .cards .card .detail .title h3 {
+  font-size: 21px;
+}
+
+.container .twolayer .left .devices .cards .card .detail .title p {
+  font-size: 17px;
+}
+
+.container .twolayer .left .devices .cards .card .informations {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+.container .twolayer .left .devices .cards .card .informations .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 100px;
+  padding: 2px 0;
+}
+
+.container .twolayer .left .devices .cards .card .informations .information img {
+  width: 15px;
+  height: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .twolayer .left .devices .cards .card .informations .information h3 {
+  font-size: 16px;
+}
+
+.container .twolayer .right {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 1000px;
+  top: 120px;
+  width: 20%;
+}
+
+.container .twolayer .right .additional:nth-child(n+2) {
+  margin-top: 50px;
+}
+
+.container .twolayer .right .additional h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container .twolayer .right .additional p {
+  font-size: 18px;
+}
+
+.container .twolayer .right .additional .items {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.container .twolayer .right .additional .items .item {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.container .twolayer .right .additional .items .item img {
+  width: 100px;
+}
+
+.container .twolayer .right .additional .items .item-info h4 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.container .twolayer .right .additional .items .item-info .informations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+.container .twolayer .right .additional .items .item-info .informations .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 2px 0;
+  gap: 5px;
+}
+
+.container .twolayer .right .additional .items .item-info .informations .information img {
+  width: 15px;
+  height: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .twolayer .right .additional .items .item-info .informations .information h3 {
+  font-size: 16px;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  padding: 20px 100px;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .left img {
+  width: 200px;
+}
+
+footer .left h3 {
+  font-size: 22px;
+}
+
+footer .right span {
+  font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */
