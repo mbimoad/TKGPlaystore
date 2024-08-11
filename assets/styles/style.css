@@ -151,9 +151,90 @@ aside.latest-created {
 }
 
 aside.user-online {
+  padding-top: 100px;
   right: 0;
   bottom: 0;
   top: 0;
+  width: 120px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+aside.user-online .active:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 20px 10px;
+  border-bottom: 1px solid white;
+}
+
+aside.user-online .active:first-child .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+aside.user-online .active:first-child .left img {
+  width: 25px;
+  height: 25px;
+}
+
+aside.user-online .active:first-child .left p {
+  font-size: 22px;
+}
+
+aside.user-online .active:first-child img {
+  width: 20px;
+  height: 20px;
+}
+
+aside.user-online .active:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+aside.user-online .active:nth-child(2) .active-user {
+  position: relative;
+}
+
+aside.user-online .active:nth-child(2) .active-user img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  border: 1px solid white;
+}
+
+aside.user-online .active:nth-child(2) .active-user .dot {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  background: lightgreen;
+  border-radius: 50%;
+  border: 4px solid black;
 }
 
 aside {
@@ -215,6 +296,7 @@ aside .opt {
 .container {
   padding: 140px 100px;
   padding-bottom: 70px;
+  padding-right: 140px;
 }
 
 .container .cover-header {
@@ -453,6 +535,7 @@ footer {
   position: relative;
   z-index: 1;
   padding: 20px 100px;
+  padding-right: 140px;
   border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
