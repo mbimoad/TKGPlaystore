@@ -144,6 +144,18 @@ header .profiles .profile-info {
           justify-content: center;
 }
 
+aside.latest-created {
+  bottom: 0;
+  left: 0;
+  top: 0;
+}
+
+aside.user-online {
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
 aside {
   background: #464646;
   position: fixed;
@@ -155,9 +167,6 @@ aside {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  bottom: 0;
-  left: 0;
-  top: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

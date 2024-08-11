@@ -117,15 +117,24 @@ header {
     }
 }
 
+aside.latest-created {
+    bottom: 0; 
+    left: 0; 
+    top: 0; 
+}
+
+aside.user-online {
+    right: 0; 
+    bottom: 0; 
+    top: 0; 
+}
+
 aside {
     background:rgb(70, 70, 70);
     position:fixed; 
     width: 60px; 
     display:flex; 
     flex-direction: column; 
-    bottom: 0; 
-    left: 0; 
-    top: 0; 
     // border:1px solid red;
     justify-content:center; 
     align-items:center;
