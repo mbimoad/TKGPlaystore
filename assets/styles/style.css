@@ -99,6 +99,10 @@ header .profiles {
   gap: 40px;
 }
 
+header .profiles .darkmode img {
+  width: 40px;
+}
+
 header .profiles .notification {
   position: relative;
 }
@@ -152,16 +156,16 @@ aside.latest-created {
 
 aside.user-online {
   padding-top: 100px;
-  right: 0;
+  left: 0;
   bottom: 0;
   top: 0;
-  width: 120px;
+  width: 110px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
-aside.user-online .active:first-child {
+aside.user-online .active-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,9 +178,10 @@ aside.user-online .active:first-child {
   width: 100%;
   padding: 20px 10px;
   border-bottom: 1px solid white;
+  border-top: 1px solid white;
 }
 
-aside.user-online .active:first-child .left {
+aside.user-online .active-title .left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,16 +191,16 @@ aside.user-online .active:first-child .left {
   gap: 10px;
 }
 
-aside.user-online .active:first-child .left img {
+aside.user-online .active-title .left img {
   width: 25px;
   height: 25px;
 }
 
-aside.user-online .active:first-child .left p {
+aside.user-online .active-title .left p {
   font-size: 22px;
 }
 
-aside.user-online .active:first-child img {
+aside.user-online .active-title img {
   width: 20px;
   height: 20px;
 }
@@ -217,8 +222,8 @@ aside.user-online .active:nth-child(2) .active-user {
 
 aside.user-online .active:nth-child(2) .active-user img {
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
@@ -238,7 +243,7 @@ aside.user-online .active:nth-child(2) .active-user .dot {
 }
 
 aside {
-  background: #464646;
+  background: rgba(70, 70, 70, 0.438);
   position: fixed;
   width: 60px;
   display: -webkit-box;
@@ -254,7 +259,7 @@ aside {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 50px;
+  gap: 40px;
   z-index: 9;
 }
 
@@ -263,12 +268,12 @@ aside div {
 }
 
 aside div img {
-  width: 30px;
+  width: 40px;
   height: auto;
+  border-radius: 7px;
 }
 
 aside div ul {
-  margin-top: 50px;
   gap: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,9 +299,10 @@ aside .opt {
 }
 
 .container {
-  padding: 140px 100px;
+  padding: 140px 0;
   padding-bottom: 70px;
-  padding-right: 140px;
+  padding-left: 160px;
+  padding-right: 80px;
 }
 
 .container .cover-header {
@@ -535,7 +541,9 @@ footer {
   position: relative;
   z-index: 1;
   padding: 20px 100px;
-  padding-right: 140px;
+  padding-right: 160px;
+  padding-left: 160px;
+  padding-right: 80px;
   border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -553,7 +561,7 @@ footer .left img {
 }
 
 footer .left h3 {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 footer .right span {

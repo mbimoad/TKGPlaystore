@@ -83,6 +83,11 @@ header {
         display:flex; 
         align-items: center;
         gap: 40px; 
+        .darkmode {
+            img {
+                width: 40px; 
+            }
+        }
         .notification {
             position:relative;
             img {
@@ -125,12 +130,12 @@ aside.latest-created {
 
 aside.user-online {
     padding-top: 100px;
-    right: 0; 
+    left: 0; 
     bottom: 0; 
     top: 0; 
-    width: 120px;
+    width: 110px;
     justify-content:flex-start;
-    .active:first-child {
+    .active-title {
         // border: 1px solid red;
         display:flex; 
         align-items:center; 
@@ -138,6 +143,7 @@ aside.user-online {
         width: 100%;
         padding: 20px 10px;
         border-bottom: 1px solid white; 
+        border-top: 1px solid white; 
         .left {
             display:flex; 
             align-items:center;
@@ -162,8 +168,8 @@ aside.user-online {
             position:relative;
             img {
                 border-radius: 50%; 
-                width: 70px; 
-                height: 70px; 
+                width: 60px; 
+                height: 60px; 
                 object-fit:cover; 
                 object-position:center center; 
                 border: 1px solid white;
@@ -182,7 +188,7 @@ aside.user-online {
 }
 
 aside {
-    background:rgb(70, 70, 70);
+    background:rgba(70, 70, 70, 0.438);
     position:fixed; 
     width: 60px; 
     display:flex; 
@@ -190,16 +196,16 @@ aside {
     // border:1px solid red;
     justify-content:center; 
     align-items:center;
-    gap: 50px;
+    gap: 40px;
     z-index: 9;
     div {
         
         text-align:center; 
         img {
-            width: 30px; 
+            width: 40px; 
             height: auto; 
+            border-radius: 7px;
         } ul {
-            margin-top: 50px;
             gap: 25px; 
             display:flex; 
             flex-direction: column;
@@ -219,9 +225,10 @@ aside {
 
 
 .container {
-    padding:140px 100px;
+    padding:140px 0;
     padding-bottom: 70px;
-    padding-right: 140px;
+    padding-left: 160px;
+    padding-right: 80px;
     .cover-header {
         // border:1px solid blue;
         display:flex; 
@@ -396,7 +403,9 @@ footer {
     position: relative;
     z-index:1;
     padding:20px 100px;
-    padding-right: 140px;
+    padding-right: 160px;
+    padding-left: 160px;
+    padding-right: 80px;
     border:1px solid red;
     display:flex; 
     align-items: center;
@@ -406,7 +415,7 @@ footer {
             width: 200px;    
         }
         h3 {
-            font-size: 22px; 
+            font-size: 18px; 
         }
     } .right {
         span {
