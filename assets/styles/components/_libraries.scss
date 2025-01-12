@@ -1,0 +1,354 @@
+.libraries {
+    // border: 1px solid red;
+    margin-left: 40px;
+    margin-right: 20px;
+
+   
+
+    #myTable {
+        tbody {
+            // display: flex;
+            // flex-direction: column;
+            // position: absolute;
+            // left: 0;
+            // right: 0;
+            tr {
+                // background-color: #2D2D2D;
+                // border-radius: 10px;
+                // overflow: hidden;
+                // margin-top: 15px;
+                // position: relative;
+                // display: flex;
+                // justify-content: space-between;
+                // align-items: center;
+                td {
+                    button {
+                        background-color: $blue;
+                        color: $basictext;
+                        font-size: 18px;
+                        padding: 9px 50px;
+                        border-radius: 4px;
+                        border: unset;
+                        outline: unset;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.light {
+    .sticky-menu {
+        background: $backgroundlight;
+        border-bottom: 1px solid #ddd;
+        h2 {
+            color: $basictextlight;
+        }  
+        .menu {
+            .buttons {
+                button {
+                    border: 1px solid $basictextlight;
+                } button {
+                    color: $basictextlight; 
+                } button.active {
+                    color: $bluelight; 
+                    border: 1px solid $bluelight;
+                }
+            }
+
+            .input {
+                .search {
+                    background-color: $headerinputlight;
+                    box-shadow: 0 1px 1px $basictext;
+                    input {
+                        color: $basictextlight; 
+                    } input::placeholder {
+                        color: $textwhtlight;
+                    } img {
+                        filter: $svgColorlight;
+                    }
+                }
+
+                .sort {
+                    &-btn {
+                        background: transparent; 
+                        filter: $svgColorlight;
+                    }
+
+                    .popup {
+                        background: $headerinputlight;
+                        .item {
+                            span {
+                                color: $basictextlight;
+                            } img {
+                                filter: $svgColorlight;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sticky-menu {
+    padding-left: 40px;
+    padding-right: 20px;
+    position: sticky;
+    top: 20px;
+    background: $background;
+    // box-shadow: 0 1px 1px $textwht;
+    border-bottom: 1px solid #222;
+    z-index: 1;
+    h2 {
+        font-size: 40px;
+        color: $basictext;
+    }
+    // border: 1px solid red;
+    .menu {
+   
+        // margin: 20px 0;
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .buttons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            button {
+                background: unset;
+                font-weight: bold;
+                
+                border: unset;
+                outline: unset;
+                padding: 9px 40px;
+                border-radius: 100px;
+                color: $basictext;
+                border: 1px solid $basictext;
+            } button.active {
+                color: $blue;
+                border: 1px solid $blue;
+            }
+        }
+
+        .input {
+            
+            .search {
+                padding-right: 10px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                border-radius: 3px;
+                overflow: hidden;
+                background-color: $headerinput;
+                box-shadow: 0 1px 1px $basictext;
+                input {
+                    width: 300px;
+                    color: $basictext;
+                    padding: 8px 10px;
+                    background-color: transparent;
+                    border: unset;
+                    outline: unset;
+                } img {
+                    width: 20px;
+                    height: 20px;
+                    filter: $svgColor;
+                } input::placeholder {
+                    color:$textwht;
+                }
+            }
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .sort {
+                cursor: pointer;
+                &-btn {
+                    // border: 1px solid red;
+                    transform: translate(0, 4px);
+                    padding: 4px;
+                    background-color: $textwht;
+                    filter: $svgColor;
+                } &-btn::before {
+                    @include createOverlay();
+                }
+                .popup.active {
+                    transform: translate(0, 0);
+                    opacity: 1;   
+                    pointer-events: unset;
+                }
+                .popup {
+                    pointer-events: none;
+                    transition: all 200ms ease 0s;
+                    // display: none;
+                    transform: translate(0, -20px);
+                    opacity: 0;   
+                    position: absolute;
+                    right: 20px;
+                    // border: 1px solid red;
+                    background-color: $headerinput;
+                    width: 200px;
+                    border-radius: 6px;
+                    .item.active {
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 7px 15px;
+                        // border: 1px solid blue;
+                        * {
+                            user-select: none;
+                            pointer-events: none;
+                        }
+                         span {
+                            color: $basictext;
+                         } img {
+                            opacity: 0;
+                            filter: $svgColor;
+                            width: 15px;
+                            height: 15px;
+                         }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+#myTable_wrapper > div:nth-child(1),
+#myTable_wrapper > div:nth-child(3) {
+    display: none;
+}
+
+
+@media screen and (max-width: 1150px) {
+    .sticky-menu {
+        .menu {
+            .buttons {
+                gap: 10px;
+                button {
+                    padding: 7px 30px;
+                    font-size: 16px;
+                }
+            }
+            .input {
+                .search {
+                    input {
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .libraries {
+        #myTable {
+            tbody {
+                tr {
+                    td {
+                        button {
+                            padding: 4px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .libraries {
+       
+    } 
+    
+    .sticky-menu {
+        // padding-left: 0px;
+        margin-left: 35px;
+        padding-right: 40px;
+        h2 {
+            font-size: 30px;
+        }
+
+        .menu {
+            padding: 30px 0;
+            .buttons {
+                gap: 10px; 
+                button {
+                    padding: 5px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .libraries {
+        #myTable {
+            overflow: auto;
+        }
+    }
+    .sticky-menu {
+        .menu {
+            flex-direction: column-reverse;
+            gap: 20px;
+            .input {
+                width: 100%;
+                .search {
+                    width: 100%;
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+            .buttons {
+                width: 100%;
+                display: none !important;
+                button {
+                    flex: 1;
+                    width: unset;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .libraries {
+        margin-left: 20px;
+        #myTable_wrapper,
+        #myTable {
+            overflow: auto !important;
+            tbody {
+                tr {
+                    td {
+                        font-size: 12px;
+                        button {
+                            font-size: 12px;
+                            padding: 3px 3px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    } .sticky-menu {
+        margin-left: 20px;
+        padding-left: unset;
+        padding-right: unset;
+        margin-right: 20px;
+    }
+}
+

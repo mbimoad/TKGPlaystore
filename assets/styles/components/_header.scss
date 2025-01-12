@@ -1,0 +1,189 @@
+$logo: 24px; 
+$icon: 20px; 
+
+body.light {
+    .hamburger {
+        span {
+            background-color: $basictextlight;
+        }
+    }
+    header {
+        background: $headerlight;
+        .finder {
+            background: $headerinputlight;
+            input, 
+            input::placeholder {
+                color: $textwhtlight;
+            }
+        }
+    } .user {
+        img {
+            filter: $svgColorlight2; 
+            @include createIcon(50px, 50%, $svgBackglight);
+        }
+        &-info {
+            p {
+                color: $textwhtlight;
+            }
+        }
+    }
+}
+
+header {
+    transition: background 100ms ease 0s;
+    // border: 1px solid blue;
+    padding: 15px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: $logo; 
+        img {
+            width: $logo;
+            height: $logo;
+        } span {
+            font-size: 18px;
+        }
+    } 
+
+    .finder {
+        display: flex;
+        align-items: center;
+        // border: 1px solid red;
+        border-radius: 4px;
+        padding-right: $icon;
+        background: $headerinput;
+        input {
+            border: unset;
+            // border: 1px solid blue;
+            padding: 10px 10px;
+            width: pxtovw(800, 1920);
+            background-color: transparent;
+            font-size: 16px;
+            color: $textwht;
+        } input::placeholder {
+            color: $textwht;
+        } img {
+            width: $icon;
+            height: $icon;
+        }
+    }
+
+    .user {
+        display: flex;
+        gap: $logo;
+        
+        img {
+            width: 35px;
+            height: 35px;
+            padding: 6px;
+            @include createIcon(50px, 50%, $svgBackg);
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            p {
+               color: $textwht;
+               font-size: 16px;
+            } span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+    header {
+        .logo {
+            gap: 16px;
+            img {
+                width: 18px;
+                height: 18px;
+            }
+            span {
+                font-size: 14px;
+            }
+        }
+
+        .finder {
+            input {
+                width: pxtovw(200, 900);
+                font-size: 14px;
+            }
+        }
+        .user {
+            gap: 14px;
+            img {
+                width: 32px;
+                height: 32px;
+            }
+            p {
+                font-size: 14px;
+            } span {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        .user {
+            display: none;
+        } .finder {
+            padding-right: 10px;
+            input {
+                width: pxtovw(200, 600);
+            }
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            width: 25px;
+            height: 20px;
+            justify-content: space-between;
+            cursor: pointer;
+            span {
+                width: 100%;
+                height: 3px;
+                background-color: $basictext;
+                border-radius: 30px;
+                transition: all 200ms ease 0s;
+                pointer-events: none;
+                cursor: none;
+            }
+
+            span:first-child.active {
+                transform: rotate(35deg) translate(2px, 2px);
+                transform-origin: top left;
+            }
+
+            span:nth-child(2).active {
+                opacity: 0;
+            }
+
+            span:last-child.active {
+                transform: rotate(-35deg) translate(0px, 0px);
+                transform-origin: bottom left;
+            }
+        }
+    }
+
+   
+}
